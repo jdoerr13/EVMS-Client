@@ -166,8 +166,9 @@ export default function App() {
                 <Route path="/compliance" element={<ProtectedRoute allowedRoles={["admin"]}><Compliance /></ProtectedRoute>} />
 
                 {/* --- Misc --- */}
-                <Route path="/accessibility-demo" element={<AccessibilityDemo />} /> {/* demo */}
-                <Route path="*" element={<Navigate to="/public" />} />
+              <Route path="/accessibility-demo" element={<AccessibilityDemo />} /> {/* demo */}
+          <Route path="/" element={<Navigate to="/login" replace />} />
+          <Route path="*" element={<Navigate to="/login" replace />} />
               </Routes>
             </AppLayout>
           )}
