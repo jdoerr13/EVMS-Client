@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom"; 
 import { useRole } from "../contexts/RoleContext";
+import rexusLogo from "../assets/rexus_logo.png";
 
 const allNavItems = {
   public: [

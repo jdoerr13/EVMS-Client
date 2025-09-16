@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRole } from "../contexts/RoleContext";
+import rexusLogo from "../assets/rexus_logo.png";
 
 export default function Login() {
   const { setRole } = useRole();
@@ -37,7 +38,14 @@ export default function Login() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-300 px-4">
 
       <div className="max-w-md w-full space-y-8 bg-white shadow-lg rounded-lg p-8 border border-gray-200">
-        
+         {/* Centered Logo */}
+  <div className="flex justify-center">
+    <img
+      src={rexusLogo}
+      alt="Rexus Logo"
+      className="h-20 w-auto mb-1 drop-shadow-sm"
+    />
+  </div>
           {/* Header */}
           <div className="flex items-center gap-4 justify-center py-6 select-none">
             {/* Monogram tile */}
@@ -157,7 +165,7 @@ export default function Login() {
 
         {/* Footer */}
         <div className="text-center text-xs text-gray-500 mt-6">
-          &copy; 2025 Virginia Community College System — Event & Venue Management System
+          &copy; 2025 Rexus — Event & Venue Management System
         </div>
       </div>
     </div>
